@@ -1,0 +1,36 @@
+footer.footer {
+	text-align: center;
+	padding: 20px 0;
+	margin-top: 20px;
+	/*border-top: 1px solid #E5E5E5;*/
+	color: #fff;
+	background-color: #444;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+.footer ul {
+	display: inline-block;
+	margin-right: 60px;
+	vertical-align: top;
+}
+
+.footer ul li {
+	list-style: none;
+	text-align: left;
+	color: #fff;
+	line-height: 30px;
+}
+
+.footer ul li a {
+	color: #fff;
+	cursor: pointer;
+}
+
+.footer-btn {
+	color: #fff;
+	background-color: #1888de;
+	border-radius: 5px;
+	border: 0;
+	padding: 5px 10px;
+}

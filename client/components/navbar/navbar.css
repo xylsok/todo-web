@@ -1,0 +1,44 @@
+.navbar-default {
+	background-color: #222125;
+	border-color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #0c0c0d;
+}
+
+.navbar-default .navbar-header > a:hover,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+	font-weight: 300;
+}
+
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 20px 50px 20px 10px;
+	font-size: 30px;
+	line-height: 20px;
+}
+
+.navbar-nav > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.nav > li > a {
+	position: relative;
+	display: block;
+	padding: 20px 30px;
+}
+
+.navbar-img {
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
