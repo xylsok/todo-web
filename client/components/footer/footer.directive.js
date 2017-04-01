@@ -8,13 +8,13 @@ angular.module('lawqWebApp')
 				element.addClass('footer');
 			},
 			controller: function ($scope, $http) {
-				$http.get('/auth/ip/current')
-					.success(function (data) {
-						$scope.ip = data;
-					})
-					.error(function (e) {
-						console.log(e);
-					});
+				//$http.get('/auth/ip/current')
+				//	.success(function (data) {
+				//		$scope.ip = data;
+				//	})
+				//	.error(function (e) {
+				//		console.log(e);
+				//	});
 			}
 		};
 	});
