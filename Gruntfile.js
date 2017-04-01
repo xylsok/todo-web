@@ -74,13 +74,7 @@ module.exports = function (grunt) {
 					middleware: function (connect) {
 						return [
 							modRewrite([
-								//'^/index/(.*)$ http://localhost:8320/$1 [P]',
-								//'^/api/(.*)$ http://localhost:8302/$1 [P]',
-								'^/index/(.*)$ http://221.122.57.39:8320/$1 [P]',
-								//'^/index/(.*)$ http://192.168.1.103:8320/$1 [P]',
-								'^/api/(.*)$ http://221.122.57.39:8302/$1 [P]',
-								'^/auth/(.*)$ http://auth.gddata.net:8080/api/$1 [P]',
-								//'^/categoryapi/(.*)$ http://123.56.250.18:8352/$1 [P]',
+								'^/api/(.*)$ http://xylsok:8600/$1 [P]',
 								'^[^\\.]*$ /index.html']),
 							connect.static('.tmp'),
 							connect().use(
