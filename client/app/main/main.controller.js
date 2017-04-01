@@ -4,6 +4,7 @@
 function MainController($scope, $http,$resource) {
 	 $http.get('/api/user/getusers').success(function(data){
 		 $scope.users=data;
+		 console.log(data);
 	 }).error(function(e){
 		 console.log(e);
 	 })
