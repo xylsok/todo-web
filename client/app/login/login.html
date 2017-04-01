@@ -87,21 +87,21 @@
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" class="form-control"
-																   placeholder="手机号" required/>
+																   placeholder="手机号" ng-model="user.phone" required/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" class="form-control"
-																   placeholder="真实姓名" required/>
+																   placeholder="真实姓名" ng-model="user.userName" required/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" class="form-control"
-																   placeholder="密码" required/>
+																   placeholder="密码" required ng-model="user.password"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>

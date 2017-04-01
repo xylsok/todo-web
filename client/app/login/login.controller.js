@@ -7,7 +7,14 @@ function MainController($scope, $http,$resource) {
 		_show:function(){
 			$scope.login.loginState=!$scope.login.loginState;
 		}
+	};
+	$scope.user={};
+	$scope.reg=function(){
+		$scope.post('/api/user/add',$scope.user).success(function(){
+
+		})
 	}
+
 }
 angular.module('lawqWebApp')
   .controller('LoingController', MainController);
