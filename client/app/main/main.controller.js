@@ -2,7 +2,11 @@
 (function() {
 
 function MainController($scope, $http,$resource) {
-	$scope.users = $resource('/api/user/getusers').query();
+	 $http.get('/api/user/getusers').success(function(data){
+		 $scope.users=data;
+	 }).error(function(e){
+		 console.log(e);
+	 })
 }
 angular.module('lawqWebApp')
   .controller('MainController', MainController);
