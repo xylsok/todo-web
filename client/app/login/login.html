@@ -82,7 +82,7 @@
 											</h4>
 											<div class="space-6"></div>
 											<p> 请输入真实信息: </p>
-											<form>
+											<form ng-submit="regObj._startReg()">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -94,7 +94,7 @@
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" class="form-control input-sm"
-																   placeholder="真实姓名" ng-model="user.userName"
+																   placeholder="真实姓名"  ng-model="user.userName"
 																   required/>
 															<i class="icon-lock"></i>
 														</span>

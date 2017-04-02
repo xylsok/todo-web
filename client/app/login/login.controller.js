@@ -14,6 +14,9 @@ function MainController($scope, $http,$resource) {
 			for(var s=1;s<=30;s++){
 				$scope.regObj.louCeng.push(s);
 			}
+		},
+		_startReg:function(){
+			alert(2);
 		}
 	};
 	$scope.regObj._createLouCeng();
