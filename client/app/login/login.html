@@ -4,7 +4,7 @@
 			<div class="main-content">
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container" >
+						<div class="login-container">
 							<div class="center">
 								<h1>
 									<i class="icon-leaf green"></i>
@@ -15,7 +15,8 @@
 							</div>
 							<div class="space-6"></div>
 							<div class="position-relative">
-								<div id="login-box" ng-if="login.loginState" class="login-box visible widget-box no-border">
+								<div id="login-box" ng-if="login.loginState"
+									 class="login-box visible widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
@@ -27,7 +28,7 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text"  class="form-control"
+															<input type="text" class="form-control"
 																   placeholder="手机号"/>
 															<i class="icon-user"></i>
 														</span>
@@ -42,7 +43,7 @@
 													<div class="space"></div>
 													<div class="clearfix">
 														<!--<label class="inline margin-top-8">-->
-															<!--<a href="#">我要注册</a>-->
+														<!--<a href="#">我要注册</a>-->
 														<!--</label>-->
 														<button type="button"
 																class="width-100  btn btn-sm btn-success">
@@ -66,14 +67,13 @@
 											</div>
 										</div>
 										<!-- /widget-main -->
-
 									</div>
 									<!-- /widget-body -->
 								</div>
 								<!-- /login-box -->
-
 								<!-- /forgot-box -->
-								<div id="signup-box"  ng-if="!login.loginState" class="signup-box widget-box no-border visible">
+								<div id="signup-box" ng-if="!login.loginState"
+									 class="signup-box widget-box no-border visible">
 									<div class="widget-body">
 										<div class="widget-main">
 											<h4 class="header green lighter bigger">
@@ -82,43 +82,67 @@
 											</h4>
 											<div class="space-6"></div>
 											<p> 请输入真实信息: </p>
-											<form >
+											<form>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control"
+															<input type="text" class="form-control input-sm"
 																   placeholder="手机号" ng-model="user.phone" required/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control"
-																   placeholder="真实姓名" ng-model="user.userName" required/>
+															<input type="text" class="form-control input-sm"
+																   placeholder="真实姓名" ng-model="user.userName"
+																   required/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control"
+															<input type="password" class="form-control input-sm"
 																   placeholder="密码" required ng-model="user.password"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control"
+															<input type="password" class="form-control input-sm"
 																   placeholder="确认密码" required/>
 															<i class="icon-retweet"></i>
 														</span>
 													</label>
-													<label class="block">
-														<input type="checkbox" class="ace"/>
+													<label class="block clearfix">
 														<span class="lbl">
-															<a href="#">User Agreement</a>
+															楼号:
+															<input type="radio" name="s"/> 10#
+															<input type="radio" name="s"/> 12#
 														</span>
 													</label>
-													<div class="space-24"></div>
+													<label class="block clearfix">
+														<span class="lbl">
+															单元:
+															<input type="radio" name="s"/> 一单元
+															<input type="radio" name="s"/> 二单元
+														</span>
+													</label>
+													<label class="block clearfix">
+														<label>楼层:</label>
+														<label>
+															<select class="width-100 form-control input-sm ">
+																<option value="{{s}}" ng-repeat="s in regObj.louCeng">{{s}}</option>
+															</select>
+														</label>
+														<label>门牌号:</label>
+														<label>
+															<select class="width-100 form-control input-sm ">
+																<option value="AZ">Arizona</option>
+																<option value="AR">Arkansas</option>
+															</select>
+														</label>
+													</label>
+
 													<div class="clearfix">
 														<button type="reset" class="width-30 pull-left btn btn-sm">
 															<i class="icon-refresh"></i>
@@ -157,15 +181,13 @@
 	</div>
 </div>
 <!--<script type="text/javascript">-->
-	<!--if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");-->
+<!--if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");-->
 <!--</script>-->
-
 <!--&lt;!&ndash; inline scripts related to this page &ndash;&gt;-->
-
 <!--<script type="text/javascript">-->
-	<!--function show_box(id) {-->
-		<!--jQuery('.widget-box.visible').removeClass('visible');-->
-		<!--jQuery('#'+id).addClass('visible');-->
-	<!--}-->
+<!--function show_box(id) {-->
+<!--jQuery('.widget-box.visible').removeClass('visible');-->
+<!--jQuery('#'+id).addClass('visible');-->
+<!--}-->
 <!--</script>-->
 

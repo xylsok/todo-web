@@ -8,6 +8,15 @@ function MainController($scope, $http,$resource) {
 			$scope.login.loginState=!$scope.login.loginState;
 		}
 	};
+	$scope.regObj={
+		louCeng:[],
+		_createLouCeng:function(){
+			for(var s=1;s<=30;s++){
+				$scope.regObj.louCeng.push(s);
+			}
+		}
+	};
+	$scope.regObj._createLouCeng();
 	$scope.user={};
 	$scope.reg=function(){
 		$scope.post('/api/user/add',$scope.user).success(function(){
