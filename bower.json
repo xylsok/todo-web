@@ -13,7 +13,12 @@
 		"lodash": "~2.4.1",
 		"font-awesome": "~4.1.0",
 		"angular-ui-router": "~0.2.15",
-		"angular-validation-match": "~1.5.2"
+		"angular-validation-match": "~1.4.0",
+		"videogular": "~1.4.4",
+		"videogular-buffering": "~1.4.4",
+		"videogular-controls": "~1.4.4",
+		"videogular-overlay-play": "~1.4.4",
+		"videogular-poster": "~1.4.4"
 	},
 	"devDependencies": {
 	}
