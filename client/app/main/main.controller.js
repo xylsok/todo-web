@@ -8,6 +8,11 @@ function MainController($scope, $http,$resource,$sce) {
 	 //}).error(function(e){
 		// console.log(e);
 	 //})
+	$scope.shufflingFigures=[
+		{link:'http://file.xylsok.com/lawq.png',path:'http://file.xylsok.com/2.png'},
+		{link:'http://file.xylsok.com/lawq.png',path:'http://file.xylsok.com/1.png'},
+		{link:'http://file.xylsok.com/lawq.png',path:'http://file.xylsok.com/3.png'}
+	]
 	$scope.controller = this;
 	$scope.controller.API = null;
 
