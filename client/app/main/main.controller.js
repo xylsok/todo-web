@@ -18,15 +18,12 @@ function MainController($scope, $http,$resource,$sce) {
 	$scope.controller.videos = [
 		{
 			sources: [
-				{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
-				{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
-				{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+				{src: $sce.trustAsResourceUrl("http://file.xylsok.com/1490970097110.mp4"), type: "video/mp4"},
 			]
 		},
 		{
 			sources: [
 				{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov"), type: "video/mp4"},
-				{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg"), type: "video/ogg"}
 			]
 		}
 	];
@@ -40,7 +37,7 @@ function MainController($scope, $http,$resource,$sce) {
 			url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
 		},
 		plugins: {
-			poster: "http://www.videogular.com/assets/images/videogular.png"
+			poster: "http://file.xylsok.com/lawq.png"
 		}
 	};
 
