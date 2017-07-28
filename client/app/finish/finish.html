@@ -12,6 +12,7 @@
 				<table class="table table-condensed table-striped  table-responsive">
 					<thead>
 						<tr>
+							<th>序号</th>
 							<th>待办名称</th>
 							<th>产品名称</th>
 							<th>完成时间</th>
@@ -20,6 +21,7 @@
 					</thead>
 					<tbody>
 						<tr ng-repeat="s in finish">
+							<td>{{$index+1}}</td>
 							<td>{{s.title}}</td>
 							<td>{{s.pName}}</td>
 							<td>{{s.closeTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
