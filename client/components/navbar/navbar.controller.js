@@ -11,7 +11,7 @@ angular.module('todoWebApp')
 				'state': 'finish'
 			},
 			{
-				'title': '笔记',
+				'title': '便签',
 				'state': 'note'
 			}
 		];
@@ -21,9 +21,5 @@ angular.module('todoWebApp')
 			Auth.logout();
 			window.location.href = '/login';
 		};
-		if ($scope.user) {
-			$http.get('/api/user/detail/' + $scope.user.id).success(function (x) {
-				$scope.user.ico = x.ico;
-			})
-		}
+
 	});
