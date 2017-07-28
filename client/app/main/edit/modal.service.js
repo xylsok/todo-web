@@ -22,40 +22,42 @@ angular.module('todoWebApp')
 			}
 		};
 	});
-angular.module('todoWebApp').controller('ModalEditorController', function ($scope, $http, $uibModalInstance, args) {
+angular.module('todoWebApp').controller('ModalEditorController', function ($scope, Auth, $http, $uibModalInstance, args) {
 	$scope.memo = {
 		level: ''
 	};
 	if (args && args.id) {
-		$http.get('/api/memo/get/'+args.id).success(function(x){
-			$scope.memo=x;
+		$http.get('/api/memo/get/' + args.id).success(function (x) {
+			$scope.memo = x;
 		})
 	} else {
 		$scope.memo.level = args.level;
 	}
 	$scope.msg = '';
+	var user = Auth.getUser();
 	$scope.core = {
 		_save: function () {
 			$scope.memo.del = 0;
 			$scope.memo.isFinish = 0;
+			$scope.memo.userName = user.userName;
 			$http.post('/api/memo/add', $scope.memo).success(function () {
 				$scope.callback();
 			}).error(function (e) {
 				$scope.msg = 'ERROR: ' + e;
 			})
 		},
-		_updateTag:function(){
-			$scope.memo.isFinish=1;
+		_updateTag: function () {
+			$scope.memo.isFinish = 1;
 			$scope.core._edit();
 		},
-		_del:function(){
+		_del: function () {
 			$scope.memo.del = 1;
 			$scope.core._edit();
 		},
-		_edit:function(){
-			$http.put('/api/memo/update',$scope.memo).success(function(){
+		_edit: function () {
+			$http.put('/api/memo/update', $scope.memo).success(function () {
 				$scope.callback();
-			}).error(function(e){
+			}).error(function (e) {
 				$scope.msg = 'ERROR: ' + e;
 			})
 		}

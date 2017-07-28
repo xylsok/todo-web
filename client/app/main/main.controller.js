@@ -19,7 +19,7 @@
 					});
 			},
 			_init: function () {
-				$http.get('/api/memo/get').success(function (data) {
+				$http.get('/api/memo/get?username='+$scope.user.userName).success(function (data) {
 					data.forEach(function (x) {
 						if (x.level == 1) {
 							$scope.core.memoAll1.push(x);
