@@ -10,6 +10,12 @@
 						$state.go('main');
 					}
 				})
+			},
+			_login2:function(){
+				$scope.user.userName='ceshi';
+				$scope.user.nickName='测试';
+				$scope.user.password='111111';
+				$scope.login._login();
 			}
 		}
 	}
