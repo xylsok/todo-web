@@ -11,7 +11,7 @@
 			memoAll3: [],
 			memoAll4: [],
 			_add: function (o) {
-				ModalEditor.new(o).then(
+				ModalEditor.new({id:'',level:o}).then(
 					function (success, error) {
 						if (success) {
 							$state.go('main', null, {reload: true});
@@ -35,6 +35,14 @@
 						}
 					})
 				})
+			},
+			_eidt:function(s){
+				ModalEditor.new({id: s.id}).then(
+					function (success, error) {
+						if (success) {
+							$state.go('main', null, {reload: true});
+						}
+					});
 			}
 		}
 		$scope.core._init();

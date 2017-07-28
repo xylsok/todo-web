@@ -3,7 +3,7 @@
 		<span aria-hidden="true">x</span>
 	</button>
 	<h4 class="modal-title">
-		<span>{{organ.id?'修改待办':'添加待办'}}</span>
+		<span>{{memo.id?'修改待办':'添加待办'}}</span>
 	</h4>
 </div>
 <div class="modal-body">
@@ -46,11 +46,25 @@
 	</form>
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-sm btn-default btn-metro min-width-80" ng-click="cancel()">
-		取消
-	</button>
-	<button type="button" class="btn btn-sm btn-primary btn-metro min-width-80" ng-click="core._save()">
-		保存
-	</button>
+	<div ng-if="memo.id">
+		<button type="button" class="btn btn-sm btn-warning btn-danger min-width-80" ng-click="core._del()">
+			删除待办
+		</button>
+		<button type="button" class="btn btn-sm btn-warning btn-metro min-width-80" ng-click="core._updateTag()">
+			标记为已办
+		</button>
+		<button type="button" class="btn btn-sm btn-primary btn-metro min-width-80" ng-click="core._edit()">
+			保存修改
+		</button>
+	</div>
+	<div ng-if="!memo.id">
+		<button type="button" class="btn btn-sm btn-default btn-metro min-width-80" ng-click="cancel()">
+			取消
+		</button>
+		<button type="button" class="btn btn-sm btn-primary btn-metro min-width-80" ng-click="core._save()">
+			保存
+		</button>
+	</div>
+
 	<span class="color-red">{{msg}}</span>
 </div>
