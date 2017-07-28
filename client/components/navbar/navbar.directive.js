@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
   .directive('navbar', function () {
     return {
       templateUrl: 'components/navbar/navbar.html',

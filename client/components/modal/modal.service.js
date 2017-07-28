@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

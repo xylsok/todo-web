@@ -1,5 +1,5 @@
 'use strict';
-angular.module('lawqWebApp', [
+angular.module('todoWebApp', [
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',

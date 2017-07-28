@@ -28,7 +28,7 @@ function MainController($scope, $http,$resource) {
 	}
 
 }
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
   .controller('LoingController', MainController);
 
 })();

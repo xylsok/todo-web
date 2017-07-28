@@ -2,7 +2,7 @@
  * Created by cassandra on 16/3/31.
  */
 'use strict';
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
 	.directive('slideCarousel', function () {
 		return {
 			templateUrl: 'app/main/slide-carousel/slide-carousel.html',
@@ -14,7 +14,7 @@ angular.module('lawqWebApp')
 			}
 		};
 	});
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
 	.controller('SlideCarouselController', function ($scope, $attrs, $filter, $interval) {
 		//console.log($scope.data);
 		$scope.index = 0;

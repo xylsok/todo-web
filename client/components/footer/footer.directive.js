@@ -1,5 +1,5 @@
 'use strict';
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
 	.directive('footer', function () {
 		return {
 			templateUrl: 'components/footer/footer.html',

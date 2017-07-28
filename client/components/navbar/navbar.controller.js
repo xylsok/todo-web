@@ -1,5 +1,5 @@
 'use strict';
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
 	.controller('NavbarCtrl', function ($scope, $rootScope, Auth) {
 		$scope.menu = [
 			{

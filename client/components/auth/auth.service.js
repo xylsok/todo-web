@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
   .factory('Auth', function Auth($http, $cookies, $rootScope) {
     var currentUser = {};
     // App clientId must required. but Secret not.

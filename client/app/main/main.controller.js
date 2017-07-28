@@ -40,7 +40,7 @@ function MainController($scope, $http,$resource,$sce) {
 		$scope.controller.config.sources = $scope.controller.videos[index].sources;
 	};
 }
-angular.module('lawqWebApp')
+angular.module('todoWebApp')
   .controller('MainController', MainController);
 
 })();
