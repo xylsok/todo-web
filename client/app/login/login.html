@@ -8,14 +8,13 @@
 							<div class="center">
 								<h1>
 									<i class="icon-leaf green"></i>
-									<span class="red">沧州</span>
-									<span class="white">龙岸-保利</span>
+									<span class="red">好记性</span>
+									<span class="white">不如烂笔头</span>
 								</h1>
-								<h4 class="blue">&copy; Company Name</h4>
 							</div>
 							<div class="space-6"></div>
 							<div class="position-relative">
-								<div id="login-box" ng-if="login.loginState"
+								<div id="login-box"
 									 class="login-box visible widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
@@ -28,14 +27,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control"
-																   placeholder="手机号"/>
+															<input type="text" ng-model="user.userName" class="form-control"
+																   placeholder="用户名"/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control"
+															<input type="password" ng-model="user.password" class="form-control"
 																   placeholder="密码"/>
 															<i class="icon-lock"></i>
 														</span>
@@ -46,127 +45,26 @@
 														<!--<a href="#">我要注册</a>-->
 														<!--</label>-->
 														<button type="button"
+																ng-click="login._login()"
 																class="width-100  btn btn-sm btn-success">
 															<i class="icon-key"></i>
 															登陆
 														</button>
-														<button type="button" ng-click="login._show()"
-																class="width-100 margin-top-4  btn btn-sm btn-primary">
-															<i class="icon-key"></i>
-															注册
-														</button>
+														<!--<button type="button" ng-click="login._show()"-->
+																<!--class="width-100 margin-top-4  btn btn-sm btn-primary">-->
+															<!--<i class="icon-key"></i>-->
+															<!--注册-->
+														<!--</button>-->
 													</div>
 													<div class="space-4"></div>
 												</fieldset>
 											</form>
-											<div class="social-or-login center">
-												<span class="bigger-110">说明</span>
-											</div>
-											<div class="social-login center">
-												谢谢使用
-											</div>
 										</div>
 										<!-- /widget-main -->
 									</div>
 									<!-- /widget-body -->
 								</div>
 								<!-- /login-box -->
-								<!-- /forgot-box -->
-								<div id="signup-box" ng-if="!login.loginState"
-									 class="signup-box widget-box no-border visible">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header green lighter bigger">
-												<i class="icon-group blue"></i>
-												新用户注册
-											</h4>
-											<div class="space-6"></div>
-											<p> 请输入真实信息: </p>
-											<form ng-submit="regObj._startReg()">
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control input-sm"
-																   placeholder="手机号" ng-model="user.phone" required/>
-															<i class="icon-user"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control input-sm"
-																   placeholder="真实姓名"  ng-model="user.userName"
-																   required/>
-															<i class="icon-lock"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control input-sm"
-																   placeholder="密码" required ng-model="user.password"/>
-															<i class="icon-lock"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control input-sm"
-																   placeholder="确认密码" required/>
-															<i class="icon-retweet"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="lbl">
-															楼号:
-															<input type="radio" name="s"/> 10#
-															<input type="radio" name="s"/> 12#
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="lbl">
-															单元:
-															<input type="radio" name="s"/> 一单元
-															<input type="radio" name="s"/> 二单元
-														</span>
-													</label>
-													<label class="block clearfix">
-														<label>楼层:</label>
-														<label>
-															<select class="width-100 form-control input-sm ">
-																<option value="{{s}}" ng-repeat="s in regObj.louCeng">{{s}}</option>
-															</select>
-														</label>
-														<label>门牌号:</label>
-														<label>
-															<select class="width-100 form-control input-sm ">
-																<option value="AZ">Arizona</option>
-																<option value="AR">Arkansas</option>
-															</select>
-														</label>
-													</label>
-
-													<div class="clearfix">
-														<button type="reset" class="width-30 pull-left btn btn-sm">
-															<i class="icon-refresh"></i>
-															重置
-														</button>
-														<button type="submit"
-																class="width-65 pull-right btn btn-sm btn-success">
-															确定
-															<i class="icon-arrow-right icon-on-right"></i>
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-										<div class="toolbar center">
-											<a href="#" ng-click="login._show()"
-											   class="back-to-login-link">
-												<i class="icon-arrow-left"></i>
-												返回登陆
-											</a>
-										</div>
-									</div>
-									<!-- /widget-body -->
-								</div>
 								<!-- /signup-box -->
 							</div>
 							<!-- /position-relative -->

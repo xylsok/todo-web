@@ -78,16 +78,6 @@ angular.module('todoWebApp', [
 				Auth.logout();
 			}
 		});
-		$rootScope.createLogin = function () {
-			var iframe = document.createElement('iframe');
-			iframe.src = 'http://auth.gddata.net/autologin';
-			document.body.appendChild(iframe);
-		};
-		$rootScope.createLogout = function () {
-			var iframe = document.createElement('iframe');
-			iframe.src = 'http://auth.gddata.net/autologout';
-			document.body.appendChild(iframe);
-		};
 		// Redirect to login if route requires auth and the user is not logged in
 		$rootScope.$on('$stateChangeStart', function (event, next) {
 			//if (next.authenticate) {

@@ -1,34 +1,21 @@
 'use strict';
-(function() {
-
-function MainController($scope, $http,$resource) {
-	$scope.login={
-		loginState:true,
-		_show:function(){
-			$scope.login.loginState=!$scope.login.loginState;
-		}
-	};
-	$scope.regObj={
-		louCeng:[],
-		_createLouCeng:function(){
-			for(var s=1;s<=30;s++){
-				$scope.regObj.louCeng.push(s);
+(function () {
+	function MainController($scope, $http, Auth,$state) {
+		$scope.user = {};
+		$scope.login = {
+			_login: function () {
+				console.log($scope.user);
+				$http.post('/api/user/login', $scope.user).success(function (x) {
+					if (x) {
+						x.ico='';
+						Auth.setUser(x);
+						$state.go('main');
+					}
+				})
 			}
-		},
-		_startReg:function(){
-			alert(2);
 		}
-	};
-	$scope.regObj._createLouCeng();
-	$scope.user={};
-	$scope.reg=function(){
-		$scope.post('/api/user/add',$scope.user).success(function(){
-
-		})
 	}
 
-}
-angular.module('todoWebApp')
-  .controller('LoingController', MainController);
-
+	angular.module('todoWebApp')
+		.controller('LoingController', MainController);
 })();

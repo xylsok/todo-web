@@ -13,15 +13,13 @@ angular.module('todoWebApp')
       logout: function () {
         $cookies.remove('token');
         $cookies.remove('user');
-        $rootScope.createLogout();
       },
       getUser: function () {
         var u = $cookies.get('user');
-        var t = $cookies.get('token');
 
         if (u) {
           var user = JSON.parse(u);
-          if (user && user.userId && t) {
+          if (user && user.userName) {
             return user;
           }
         }

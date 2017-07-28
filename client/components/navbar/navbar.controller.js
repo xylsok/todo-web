@@ -1,30 +1,29 @@
 'use strict';
 angular.module('todoWebApp')
-	.controller('NavbarCtrl', function ($scope, $rootScope, Auth) {
+	.controller('NavbarCtrl', function ($scope, $http, $rootScope, Auth) {
 		$scope.menu = [
 			{
-				'title': '首页',
+				'title': '待办',
 				'state': 'main'
 			},
 			{
-				'title': '产品',
-				'state': 'project'
+				'title': '已办',
+				'state': 'finish'
 			},
 			{
-				'title': '统计',
-				'state': 'statistical'
+				'title': '笔记',
+				'state': 'note'
 			}
 		];
 		$scope.isCollapsed = true;
 		$scope.user = Auth.getUser();
-		$scope.clientId = Auth.getClientId();
 		$scope.logout = function () {
 			Auth.logout();
-			$rootScope.createLogout();
+			window.location.href = '/login';
 		};
-		//console.log($scope.user);
-		if (!$scope.user) {
-			// console.log('will login...');
-			//$rootScope.createLogin();
+		if ($scope.user) {
+			$http.get('/api/user/detail/' + $scope.user.id).success(function (x) {
+				$scope.user.ico = x.ico;
+			})
 		}
 	});
