@@ -48,6 +48,7 @@ angular.module('todoWebApp').controller('ModalEditorController', function ($scop
 		},
 		_updateTag: function () {
 			$scope.memo.isFinish = 1;
+			$scope.memo.closeTime=new Date();
 			$scope.core._edit();
 		},
 		_del: function () {

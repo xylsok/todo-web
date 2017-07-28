@@ -7,29 +7,29 @@
 			</div>
 			<div class="panel-body content">
 				<h4 class="color-aaa" ng-if="!finish.length">暂无内容...</h4>
-				<div class="">
+				<div class="table-responsive" ng-if="finish.length">
+					<table class="table table-condensed table-striped  ">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>待办名称</th>
+								<th>产品名称</th>
+								<th>完成时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="s in finish">
+								<td>{{$index+1}}</td>
+								<td>{{s.title}}</td>
+								<td>{{s.pname}}</td>
+								<td>{{s.closeTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								<td><i ng-click="delMemo(s)" uib-tooltip="删除待办"
+									   class="glyphicon glyphicon-trash color-red fa-click"></i></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<table class="table table-condensed table-striped  table-responsive">
-					<thead>
-						<tr>
-							<th>序号</th>
-							<th>待办名称</th>
-							<th>产品名称</th>
-							<th>完成时间</th>
-							<th>操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="s in finish">
-							<td>{{$index+1}}</td>
-							<td>{{s.title}}</td>
-							<td>{{s.pName}}</td>
-							<td>{{s.closeTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
-							<td><i ng-click="delMemo(s)" uib-tooltip="删除待办"
-								   class="glyphicon glyphicon-trash color-red fa-click"></i></td>
-						</tr>
-					</tbody>
-				</table>
 				<!--<div ng-repeat="s in finish">
 					<h5><a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a> </h5>
 				</div>-->

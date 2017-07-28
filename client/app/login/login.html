@@ -1,93 +1,29 @@
-<div class="page-container">
-	<div class="login-layout">
-		<div class="main-container">
-			<div class="main-content">
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container">
-							<div class="center">
-								<h1>
-									<i class="icon-leaf green"></i>
-									<span class="red">好记性</span>
-									<span class="white">不如烂笔头</span>
-								</h1>
-							</div>
-							<div class="space-6"></div>
-							<div class="position-relative">
-								<div id="login-box"
-									 class="login-box visible widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header blue lighter bigger">
-												<i class="icon-coffee green"></i>
-												请输入用户名和密码
-											</h4>
-											<div class="space-6"></div>
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" ng-model="user.userName" class="form-control"
-																   placeholder="用户名"/>
-															<i class="icon-user"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" ng-model="user.password" class="form-control"
-																   placeholder="密码"/>
-															<i class="icon-lock"></i>
-														</span>
-													</label>
-													<div class="space"></div>
-													<div class="clearfix">
-														<!--<label class="inline margin-top-8">-->
-														<!--<a href="#">我要注册</a>-->
-														<!--</label>-->
-														<button type="button"
-																ng-click="login._login()"
-																class="width-100  btn btn-sm btn-success">
-															<i class="icon-key"></i>
-															登陆
-														</button>
-														<div>
-														</div>
-														<button type="button" ng-click="login._login2()"
-																class="width-100 margin-top-4  btn btn-sm btn-primary">
-															<i class="icon-key"></i>
-															测试账号登录
-														</button>
-													</div>
-													<div class="space-4"></div>
-												</fieldset>
-											</form>
-										</div>
-										<!-- /widget-main -->
-									</div>
-									<!-- /widget-body -->
-								</div>
-								<!-- /login-box -->
-								<!-- /signup-box -->
-							</div>
-							<!-- /position-relative -->
-						</div>
+<div class="container">
+	<div class="row margin-top-200">
+		<div class="col-sm-12">
+			<section id="content">
+				<form ng-submit="login._login()">
+					<h1>备忘录</h1>
+					<div>
+						<input type="text" placeholder="Username" ng-model="user.userName" required="" id="username"/>
 					</div>
-					<!-- /.col -->
+					<div>
+						<input type="password" placeholder="Password" ng-model="user.password" required=""
+							   id="password"/>
+					</div>
+					<div class="text-center">
+						<input type="submit" value="登 陆"/>
+					</div>
+				</form>
+				<!-- form -->
+				<div class="button">
+					<div>
+						<a href="#" ng-click="login._login2()">测试账号登录</a>
+					</div>
 				</div>
-				<!-- /.row -->
-			</div>
+				<!-- button -->
+			</section>
+			<!-- content -->
 		</div>
-		<!-- /.main-container -->
 	</div>
-</div>
-<!--<script type="text/javascript">-->
-<!--if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");-->
-<!--</script>-->
-<!--&lt;!&ndash; inline scripts related to this page &ndash;&gt;-->
-<!--<script type="text/javascript">-->
-<!--function show_box(id) {-->
-<!--jQuery('.widget-box.visible').removeClass('visible');-->
-<!--jQuery('#'+id).addClass('visible');-->
-<!--}-->
-<!--</script>-->
-
+</div><!-- container -->

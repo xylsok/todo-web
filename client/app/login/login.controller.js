@@ -1,14 +1,19 @@
 'use strict';
 (function () {
-	function MainController($scope, $http, Auth, $state) {
+	function Controller($scope, $http, Auth, $state) {
 		$scope.user = {};
 		$scope.login = {
+			msg:'',
 			_login: function () {
 				$http.post('/api/user/login', $scope.user).success(function (x) {
 					if (x) {
 						Auth.setUser(x);
 						$state.go('main');
+					}else{
+						$scope.login.msg='用户名或密码错误！';
 					}
+				}).error(function(e){
+					$scope.login.msg='服务器发生错误。';
 				})
 			},
 			_login2:function(){
@@ -21,5 +26,5 @@
 	}
 
 	angular.module('todoWebApp')
-		.controller('LoingController', MainController);
+		.controller('LoingController', Controller);
 })();
