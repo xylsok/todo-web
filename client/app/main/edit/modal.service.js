@@ -49,7 +49,7 @@ angular.module('todoWebApp').controller('ModalEditorController', function ($scop
 			$scope.core._edit();
 		},
 		_del:function(){
-			$scope.memo.del = 0;
+			$scope.memo.del = 1;
 			$scope.core._edit();
 		},
 		_edit:function(){
