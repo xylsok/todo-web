@@ -5,7 +5,11 @@
 		if (!$scope.user) {
 			$state.go('login');
 		}
+		$scope.shwoMode={
+			sxx:true
+		}
 		$scope.core = {
+			memo:{},
 			memoAll1: [],
 			memoAll2: [],
 			memoAll3: [],
@@ -34,6 +38,10 @@
 							$scope.core.memoAll4.push(x);
 						}
 					})
+					$scope.core.memo=_.groupBy(data,function (x) {
+						return x.pname;
+					})
+					console.log($scope.core.memo);
 				})
 			},
 			_eidt:function(s){
