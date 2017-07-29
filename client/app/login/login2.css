@@ -116,7 +116,13 @@ form:after {
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
-	width: 380px;
+	width: 400px;
+}
+
+@media (max-width: 768px) {
+	#content {
+		width: 100%;
+	}
 }
 
 #content h1 {
@@ -267,13 +273,13 @@ form:after {
 	color: #85592e;
 	cursor: pointer;
 	float: left;
-	left: 70px;
+	/*left: 70px;*/
 	font: bold 15px Helvetica, Arial, sans-serif;
 	height: 35px;
 	margin: 20px 0 35px 15px;
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	width: 190px;
+	width: 160px;
 }
 
 #content form input[type="submit"]:hover {
