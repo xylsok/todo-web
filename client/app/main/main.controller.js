@@ -51,6 +51,14 @@
 							$state.go('main', null, {reload: true});
 						}
 					});
+			},
+			_pnameAdd:function(s){
+				ModalEditor.new({pname: s}).then(
+					function (success, error) {
+						if (success) {
+							$state.go('main', null, {reload: true});
+						}
+					});
 			}
 		}
 		$scope.core._init();

@@ -6,12 +6,17 @@
 				<div class="col-sm-6">
 					<div class="panel panel-danger btn-metro">
 						<div class="panel-heading">
-							<h3 class="panel-title">很重要-很紧急<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(1)" class="fa fa-plus fa-click" aria-hidden="true"></i></div></h3>
+							<h3 class="panel-title">很重要-很紧急
+								<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(1)"
+														   class="fa fa-plus fa-click" aria-hidden="true"></i></div>
+							</h3>
 						</div>
 						<div class="panel-body content">
 							<h4 class="color-aaa" ng-if="!core.memoAll1.length">添加内容...</h4>
 							<div ng-repeat="s in core.memoAll1">
-								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a> </h5>
+								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)"
+																		  uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
+								</h5>
 							</div>
 						</div>
 					</div>
@@ -19,12 +24,17 @@
 				<div class="col-sm-6">
 					<div class="panel panel-primary btn-metro">
 						<div class="panel-heading">
-							<h3 class="panel-title">重要-不紧急<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(2)" class="fa fa-plus fa-click" aria-hidden="true"></i></div></h3>
+							<h3 class="panel-title">重要-不紧急
+								<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(2)"
+														   class="fa fa-plus fa-click" aria-hidden="true"></i></div>
+							</h3>
 						</div>
 						<div class="panel-body content">
 							<h4 class="color-aaa" ng-if="!core.memoAll2.length">添加内容...</h4>
 							<div ng-repeat="s in core.memoAll2">
-								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a> </h5>
+								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)"
+																		  uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
+								</h5>
 							</div>
 						</div>
 					</div>
@@ -34,12 +44,17 @@
 				<div class="col-sm-6">
 					<div class="panel panel-success btn-metro">
 						<div class="panel-heading">
-							<h3 class="panel-title">有空就做-越早越好<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(3)" class="fa fa-plus fa-click" aria-hidden="true"></i></div></h3>
+							<h3 class="panel-title">有空就做-越早越好
+								<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(3)"
+														   class="fa fa-plus fa-click" aria-hidden="true"></i></div>
+							</h3>
 						</div>
 						<div class="panel-body content">
 							<h4 class="color-aaa" ng-if="!core.memoAll3.length">添加内容...</h4>
 							<div ng-repeat="s in core.memoAll3">
-								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a> </h5>
+								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)"
+																		  uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
+								</h5>
 							</div>
 						</div>
 					</div>
@@ -47,12 +62,17 @@
 				<div class="col-sm-6">
 					<div class="panel panel-info btn-metro">
 						<div class="panel-heading">
-							<h3 class="panel-title">不做暂阶段没影响<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(4)" class="fa fa-plus fa-click" aria-hidden="true"></i></div></h3>
+							<h3 class="panel-title">不做暂阶段没影响
+								<div class="pull-right"><i uib-tooltip="添加待办" ng-click="core._add(4)"
+														   class="fa fa-plus fa-click" aria-hidden="true"></i></div>
+							</h3>
 						</div>
 						<div class="panel-body content">
 							<h4 class="color-aaa" ng-if="!core.memoAll4.length">添加内容...</h4>
 							<div ng-repeat="s in core.memoAll4">
-								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a> </h5>
+								<h5 class="text-overflow">{{$index+1}}、<a href="#" ng-click="core._eidt(s)"
+																		  uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
+								</h5>
 							</div>
 						</div>
 					</div>
@@ -61,29 +81,39 @@
 		</div>
 		<div ng-if="!shwoMode.sxx">
 			<div ng-repeat="(k,v) in core.memo">
-
 				<div class="panel panel-default btn-metro">
 					<div class="panel-heading">
-						<h3 class="panel-title">{{k}}</h3>
+						<h3 class="panel-title">{{k}}
+							<div class="pull-right"><i title="添加 {{k}} 待办" ng-click="core._pnameAdd(k)"
+													   class="fa fa-plus fa-click" aria-hidden="true"></i></div>
+						</h3>
 					</div>
 					<div class="panel-body">
 						<h4 class="color-aaa" ng-if="!core.memoAll4.length">添加内容...</h4>
 						<div ng-repeat="s in v">
 							<h5 class="text-overflow">
-								{{$index+1}}、<i title="紧急程度: {{s.level}}" class="fa fa-circle font-size-12" ng-class="{'tag-danger':s.level==1,'tag-primary':s.level==2,'tag-success':s.level==3,'tag-info':s.level==4}" aria-hidden="true"></i> <a href="#" ng-click="core._eidt(s)" uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
+								{{$index+1}}、<i title="紧急程度: {{s.level}}" class="fa fa-circle font-size-12"
+												ng-class="{'tag-danger':s.level==1,'tag-primary':s.level==2,'tag-success':s.level==3,'tag-info':s.level==4}"
+												aria-hidden="true"></i> <a href="#" ng-click="core._eidt(s)"
+																		   uib-tooltip="创建时间: {{s.createTime|date:'yyyy-MM-dd HH:mm:ss'}}">{{s.title}}</a>
 							</h5>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 	<div class="side-bar">
-		<div class="text-center margin-top-10" ng-click="shwoMode.sxx=!shwoMode.sxx" style="margin:0 auto;line-height:18px;" ng-class="{'side-bar-active':shwoMode.sxx}"><i ng-if="shwoMode.sxx" class="fa fa-circle" aria-hidden="true"></i> 四象限显示 </div>
-		<div class="text-center margin-top-10" ng-click="shwoMode.sxx=!shwoMode.sxx" style="margin:0 auto;line-height:18px;" ng-class="{'side-bar-active':!shwoMode.sxx}"><i ng-if="!shwoMode.sxx" class="fa fa-circle" aria-hidden="true"></i> 产品名显示 </div>
+		<div class="text-center margin-top-10" ng-click="shwoMode.sxx=!shwoMode.sxx"
+			 style="margin:0 auto;line-height:18px;" ng-class="{'side-bar-active':shwoMode.sxx}"><i ng-if="shwoMode.sxx"
+																									class="fa fa-circle"
+																									aria-hidden="true"></i>
+			四象限显示
+		</div>
+		<div class="text-center margin-top-10" ng-click="shwoMode.sxx=!shwoMode.sxx"
+			 style="margin:0 auto;line-height:18px;" ng-class="{'side-bar-active':!shwoMode.sxx}"><i
+			ng-if="!shwoMode.sxx" class="fa fa-circle" aria-hidden="true"></i> 产品名显示
+		</div>
 	</div>
-
 </div>
 <footer></footer>

@@ -32,6 +32,7 @@ angular.module('todoWebApp').controller('ModalEditorController', function ($scop
 		})
 	} else {
 		$scope.memo.level = args.level;
+		$scope.memo.pname = args.pname;
 	}
 	$scope.msg = '';
 	var user = Auth.getUser();
