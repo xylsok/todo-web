@@ -1,9 +1,9 @@
-section h2, p {
+section h2, section p {
 	font-size: 100%;
 	font-weight: normal;
 }
 
-section ul, li {
+section ul, section li {
 	list-style: none;
 }
 
@@ -89,7 +89,7 @@ section ul li:nth-child(5n) a{
 	position:relative;
 	top:-10px;
 }
-section ul li a:hover,ul li a:focus{
+section ul li a:hover,section ul li a:focus{
 	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
 	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
 	box-shadow:10px 10px 7px rgba(0,0,0,.7);
@@ -97,5 +97,8 @@ section ul li a:hover,ul li a:focus{
 	-moz-transform: scale(1.25);
 	-o-transform: scale(1.25);
 	position:relative;
-	z-index:5;
+	z-index:2000;
+}
+.fa-thumb-tack:hover,.fa-times:hover{
+	color: #ff9b78;
 }
