@@ -41,7 +41,6 @@
 					$scope.core.memo=_.groupBy(data,function (x) {
 						return x.pname;
 					})
-					console.log($scope.core.memo);
 				})
 			},
 			_eidt:function(s){

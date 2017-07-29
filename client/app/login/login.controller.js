@@ -14,7 +14,6 @@
 						$('.login').addClass('animated shake');
 						setTimeout(function(){
 							$('.login').removeClass('animated shake');
-							alert($scope.login.msg);
 						},2000)
 
 					}

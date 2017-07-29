@@ -1,7 +1,10 @@
 'use strict';
 (function () {
-	function Controller($scope, $http, $resource, Auth) {
+	function Controller($scope, $http, $state, Auth) {
 		$scope.user = Auth.getUser();
+		if (!$scope.user) {
+			$state.go('login');
+		}
 		$scope.note = {};
 		$scope.core = {
 			del: false,
