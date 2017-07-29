@@ -3,7 +3,7 @@
 	<div class="container padding-top-20">
 		<div ng-if="shwoMode.sxx">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 animated swing">
 					<div class="panel panel-danger btn-metro">
 						<div class="panel-heading">
 							<h3 class="panel-title">很重要-很紧急
@@ -21,7 +21,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 animated swing">
 					<div class="panel panel-primary btn-metro">
 						<div class="panel-heading">
 							<h3 class="panel-title">重要-不紧急
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 animated swing">
 					<div class="panel panel-success btn-metro">
 						<div class="panel-heading">
 							<h3 class="panel-title">有空就做-越早越好
@@ -59,7 +59,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 animated swing">
 					<div class="panel panel-info btn-metro">
 						<div class="panel-heading">
 							<h3 class="panel-title">不做暂阶段没影响
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 		<div ng-if="!shwoMode.sxx">
-			<div ng-repeat="(k,v) in core.memo">
+			<div ng-repeat="(k,v) in core.memo" class="animated zoomIn">
 				<div class="panel panel-default btn-metro">
 					<div class="panel-heading">
 						<h3 class="panel-title">{{k}}
@@ -90,7 +90,7 @@
 					</div>
 					<div class="panel-body">
 						<h4 class="color-aaa" ng-if="!core.memoAll4.length">添加内容...</h4>
-						<div ng-repeat="s in v">
+						<div ng-repeat="s in v" class="animated bounce">
 							<h5 class="text-overflow">
 								{{$index+1}}、<i title="紧急程度: {{s.level}}" class="fa fa-circle font-size-12"
 												ng-class="{'tag-danger':s.level==1,'tag-primary':s.level==2,'tag-success':s.level==3,'tag-info':s.level==4}"
