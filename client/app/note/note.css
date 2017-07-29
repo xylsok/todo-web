@@ -102,3 +102,7 @@ section ul li a:hover,section ul li a:focus{
 .fa-thumb-tack:hover,.fa-times:hover{
 	color: #ff9b78;
 }
+.note-bgc{
+	background-color:#ffffff ;
+	background-image:url(/assets/bj.jpg) ;
+}
