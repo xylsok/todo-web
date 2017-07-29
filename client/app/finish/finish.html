@@ -21,7 +21,7 @@
 						<tbody>
 							<tr ng-repeat="s in finish">
 								<td>{{$index+1}}</td>
-								<td>{{s.title}}</td>
+								<td><a href="/detail/{{s.id}}">{{s.title}}</a></td>
 								<td>{{s.pname}}</td>
 								<td>{{s.closeTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
 								<td><i ng-click="delMemo(s)" uib-tooltip="删除待办"

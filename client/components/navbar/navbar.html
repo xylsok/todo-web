@@ -5,7 +5,7 @@
 		</div>
 		<div uib-collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 			<ul class="nav navbar-nav">
-				<li ng-repeat="item in menu" ui-sref-active="active">
+				<li ng-if="item.show" ng-repeat="item in menu" ui-sref-active="active">
 					<a class="font-size-18" ui-sref="{{item.state}}">{{item.title}}</a>
 				</li>
 			</ul>

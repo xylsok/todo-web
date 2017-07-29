@@ -1,13 +1,13 @@
 <div class="container">
-	<div class="row margin-top-200">
+	<div class="row margin-top-200 animated bounce">
 		<div class="col-sm-12">
 			<section id="content">
-				<form ng-submit="login._login()">
+				<form ng-submit="login._login()" >
 					<h1>备忘录</h1>
-					<div>
+					<div class="login">
 						<input type="text" placeholder="Username" ng-model="user.userName" required="" id="username"/>
 					</div>
-					<div>
+					<div class="login">
 						<input type="password" placeholder="Password" ng-model="user.password" required=""
 							   id="password"/>
 					</div>

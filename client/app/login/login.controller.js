@@ -11,7 +11,12 @@
 						$state.go('main');
 					} else {
 						$scope.login.msg = '用户名或密码错误！';
-						alert($scope.login.msg);
+						$('.login').addClass('animated shake');
+						setTimeout(function(){
+							$('.login').removeClass('animated shake');
+							alert($scope.login.msg);
+						},2000)
+
 					}
 				}).error(function (e) {
 					$scope.login.msg = '服务器发生错误。';
