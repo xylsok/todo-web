@@ -187,16 +187,16 @@ module.exports = function (grunt) {
 			}
 		},
 		// Renames files for browser caching purposes
-		/*filerev: {
-		 dist: {
-		 src: [
-		 '<%= yeoman.dist %>/{app,components}/!**!/!*.js',
-		 '<%= yeoman.dist %>/!**!/!*.css',
-		 '<%= yeoman.dist %>/assets/images/!**!/!*.{png,jpg,jpeg,gif,webp,svg}',
-		 '<%= yeoman.dist %>/assets/fonts/!*'
-		 ]
-		 }
-		 },*/
+		filerev: {
+			dist: {
+				src: [
+					'<%= yeoman.dist %>/{app,components}/**/*.js',
+					'<%= yeoman.dist %>/!**!/!*.css',
+					//'<%= yeoman.dist %>/assets/images/!**/!*.{png,jpg,jpeg,gif,webp,svg}',
+					'<%= yeoman.dist %>/assets/fonts/!*'
+				]
+			}
+		},
 		useminPrepare: {
 			html: '<%= yeoman.client %>/index.html',
 			options: {
