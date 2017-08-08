@@ -75,6 +75,7 @@ module.exports = function (grunt) {
 						return [
 							modRewrite([
 								'^/api/(.*)$ http://xylsok.com:8311/$1 [P]',
+								'^/api2/(.*)$ http://192.168.1.106:8080/$1 [P]',
 								'^[^\\.]*$ /index.html']),
 							connect.static('.tmp'),
 							connect().use(
