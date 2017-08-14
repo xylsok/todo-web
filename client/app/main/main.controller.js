@@ -60,6 +60,7 @@
 					});
 			}
 		}
+		$scope.foo='';
 		$scope.core._init();
 	}
 

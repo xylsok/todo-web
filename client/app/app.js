@@ -11,11 +11,19 @@ angular.module('todoWebApp', [
 	"com.2fdevs.videogular.plugins.poster",
 	"com.2fdevs.videogular.plugins.buffering"
 ])
-	.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+	.config(function ($stateProvider,$sceDelegateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 		$httpProvider.interceptors.push('authInterceptor'); // 设置拦截器
 		$urlRouterProvider
 			.otherwise('/');
 		$locationProvider.html5Mode(true);
+		$sceDelegateProvider.resourceUrlWhitelist([
+			// Allow same origin resource loads.
+			'self',
+			// Allow loading from our assets domain. Notice the difference between * and **.
+			'http://gdfiles.oss-cn-beijing.aliyuncs.com/cloud/**',
+			'http://123.56.76.155:8080/**',
+			'http://123.56.76.155/**',
+			'http://218.246.35.14/**']);
 	})
 	.factory('authInterceptor', function ($rootScope, $q, $cookies) {
 		var state;

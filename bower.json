@@ -19,7 +19,8 @@
 		"videogular-buffering": "~1.4.4",
 		"videogular-controls": "~1.4.4",
 		"videogular-overlay-play": "~1.4.4",
-		"videogular-poster": "~1.4.4"
+		"videogular-poster": "~1.4.4",
+		"wangEditor": "~3.0.8"
 	},
 	"devDependencies": {
 	}
