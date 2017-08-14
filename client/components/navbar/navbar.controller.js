@@ -16,6 +16,10 @@ angular.module('todoWebApp')
 				'title': '便签',
 				'state': 'note',
 				'show':true
+			},{
+				'title': 'test',
+				'state': 'test',
+				'show':true
 			},
 			{
 				'title': '详情',
