@@ -4,7 +4,16 @@
 	<div id="div3">
 		<p>欢迎使用 wangEditor 编辑器</p>
 	</div>
-	<button ng-click="getHtml()" id="btn1">获取html</button>
-	<button ng-click="getText()" id="btn2">获取text</button>
+	<hr>
+	<div class="text-center">
+		<button ng-click="getHtml()" id="btn1">获取html</button>
+		<button ng-click="getText()" id="btn2">获取text</button>
+		<button ng-click="remove()">delAll</button>
+	</div>
+
+	<br>
+	<hr>
+	<div ng-bind-html="html"></div>
+	<div>{{text}}</div>
 </div>
 <footer></footer>
