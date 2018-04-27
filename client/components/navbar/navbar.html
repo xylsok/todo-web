@@ -22,7 +22,7 @@
 				<li ng-if="user && user.id">
 					<a href="#" target="_blank">
 						<img class="max-18 navbar-img"
-							 ng-src="http://file.xylsok.com/wwyz-file/{{user.ico}}">
+							 ng-src="{{user.ico}}">
 						{{user.nickName || user.userName || user.id}}
 					</a>
 				</li>
