@@ -1,0 +1,44 @@
+.content {
+	min-height: 230px;
+}
+
+.side-bar ,.side-bar2{
+	width: 30px;
+	position: fixed;
+	border: 1px solid #ff946f;
+	right: 0px;
+	font-size: 14px;
+	z-index: 100;
+	cursor: pointer;
+}
+.side-bar{
+	bottom: 200px;
+}
+
+
+.side-bar>div{
+	width: 30px;
+	display: inline-block;
+	margin-bottom: 2px;
+	padding: 10px 2px 10px 2px;
+	/*color: #ff9667;ff9667*/
+}
+.side-bar-active{
+	background-color: #ff946f;!important;
+	border: 1px solid #ee8a67;
+	color:#fff;
+}
+.tag-danger{
+	color: #eb4950;
+}
+.tag-primary{
+	color: #437bca;
+}
+.tag-success{
+	color: #75b45f;
+}
+.tag-info{
+	color: #83d0d6;
+}
+
+
